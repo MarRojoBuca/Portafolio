@@ -1,0 +1,124 @@
+:root {
+     /*Estos son Variables*/
+    --color-principal:wheat;
+    --color-base: blue;
+    --texto-parrafo:18px;
+}
+
+nav {
+    padding: 10px 20px; /*diez corresponde arriba y abajo y 20 inzquierda derecha*/
+    /*
+    los valores se leen en el sentido de las agujas del
+    Reloj, iniciando desde las 12
+        padding: 10px 20px 10px 20px
+    
+    hay otra forma de hacer esto pero es mucha mas larga
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-botton:10px;
+        padding-left=20px
+    
+    */
+
+    /*
+    El display maneja como se muestra los elementos
+    o si se muestran
+    */
+    display: flex;
+
+    /*Maneja el eje principaldel Elemento; cabe acotar solo se utiliza si tiene display flex*/
+    justify-content: space-between;  /*Aleja los mas que se puede a los elementos*/
+
+    /*Maneja el eje secundario del Elemento*/
+    align-items: center;
+    font-size: var(--texto-parrafo);
+
+    /*Degradado*/
+  /*  background: linear-gradient(90deg, var(--color-principal), var(--color-base));*/
+    background: linear-gradient(90deg, var(--color-principal), rgb(69, 27, 168));
+
+}
+
+nav > div {
+display: flex;
+justify-self: center;
+/*Coloca espacio entre elementos*/
+gap: 12px;
+
+}
+
+/*
+Clases:
+Las clases se utilizan para darle Estilos a un Grupo de Elementos
+*/
+
+
+/*nav > div p:hover {  sin utilizar clases*/
+.hover:hover { 
+    font-weight: 900;
+    cursor:pointer;
+    transition: font-weight 1.5s ;
+}
+
+#contacto {
+background-color: rgba(68, 0, 255, 0.829);
+color: var(--color-principal);
+font-size: var(--texto-parrafo);
+/*los colores se pueden colocar con hexadecimal
+rgb,rgba,hsl,hsla
+*/
+border: 2px solid rgb(12, 20, 16);
+/*border-width: 2px 0; */
+border-radius: 45px;
+}
+
+/*PSEUDO CLASES: Maneja los estados de un Elemento*/
+/*
+
+LISTAS DE PSEUDO CLASES
+:active (Cuando se da Clic)
+:focus (Cuando se selecciona)
+:hover (Cuando se pasa el Mouse)
+:visited (Cuando ya se visitó)
+:link (Cuandono se ha visitado)
+:first-child (Primer Hijo)
+:last-child (Ultimo Hijo)
+
+*/
+#contacto:hover {
+background-color: var(--color-principal);
+color: var(--color-base);
+border: 2px solid var(--color-base);
+cursor: pointer;
+/*transition:propiedad tiempo efecto; es decir que el cambio se mas rapido o mas lento */
+transition: background-color 0.5s, color 0.5s ;
+}
+
+
+/* TAREA 1 CV, TAREA 2 la que se señala abajo
+Crear otros archivos llamados 
+ejercicios_ccs.html
+ejercicios.css
+
+Crea un div que sea una columna y contenga tres div que sea una fila cada una y cada una contenga dos parrafos que esten vcolumnas alineadas en el mdio tanto vertical como horizontal
+
+TAREA 3
+Agregar estiloa al CV anteriormente realizado
+*/
+
+/*
+¿Que es mas Especifico?
+    clase > Etiqueta
+        o
+    Clase > Clase  este es mas revelante
+
+    clase > Etiqueta
+        o
+    clase > clase
+        o
+    id   en este caso el id es mas revelante
+
+
+
+
+*/
