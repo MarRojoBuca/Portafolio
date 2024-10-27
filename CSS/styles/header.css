@@ -1,0 +1,117 @@
+header {
+    /*Permite crear varias filas o columnas*/
+    display: grid;
+
+    /*Sirve para indicar cuantas columnas quiero y su tamaño*/
+    grid-template-columns: 1fr 1fr; /*fr divide en sección en este caso tiene dos columnas y miden lo mismo */
+    /*para tres columnas condistintos tamaños
+    grid-template-columns: 25% 50% 25%; */
+
+    padding: 10px 20px;
+    background: linear-gradient(90deg, var(--color-principal), rgb(69, 27, 168));
+
+    /*Es parte de la Animación*/
+    /*Si son Necesarios*/
+    background: linear-gradient(270deg, #8935a8, #35a886);
+    background-size: 400% 400%;
+    /*no son necesarios*/
+    -webkit-animation: fondo 30s ease infinite;
+    -moz-animation: fondo 30s ease infinite;
+    /*si son necesarios*/
+    animation: fondo 30s ease infinite;
+}
+
+header > div > img {
+
+    width: 50%;
+
+}
+
+.izquierda{  /*para hacer la clase*/
+ display: flex;    /*crea una fila*/
+ flex-direction: column;  /*Para convertirla en columna*/
+ justify-content: center;  /*Como el eje vertical de una columna es vertical con justify content lo centra verticalmente, pero es la columna no el texto*/
+ /*alinear texto*/
+ text-align:center;
+ 
+ gap: 16px; ;  /*separa los elemntos de una columna o fila*/
+ /*background-color:cornflowerblue; */
+}
+
+.izquierda >h1 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.izquierda >h2 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.izquierda >div{
+    /*Para que el registre y el combo box se vean como una fila se vean como un solo elemento aunque realmente ean dos*/
+    display: flex;
+    gap: 0;
+}
+
+.izquierda >div >input{
+    
+    border-radius:25px 0 0 25px ;
+}
+
+.izquierda >div >button {
+    /*Colocar borde solo en la izquierda*/
+    border-radius: 0 25px 25px 0;
+    background-color: antiquewhite;
+    color:brown;
+    font-weight: 600;
+    border: none;
+    border-left: 5px solid rgba(137, 43, 226, 0.158);
+    padding: 5px;
+    font-size: 14px;
+}
+
+.derecha {
+display: flex;
+justify-content: center;
+align-items: center;
+/*background-color: aquamarine;*/
+
+}
+
+/*cOLOCAR ANIMACIÓN EN EL FONDO PERO NO SE OBSERVA MUCHO*/
+
+
+.css-selector {
+
+}
+
+/*Estos dos no son necesarios se colocan es por la compatibilidad del Navegador*/
+@-webkit-keyframes fondo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes fondo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/*Este si es necesario para la Animación*/
+@keyframes fondo {
+
+    0%{
+        background-position:0% 50%;
+      /*  height: 50vh; para colocar el tamaño en 50*/
+    }
+    50%{
+        background-position:100% 50%;
+       /* height: 100vh; para colocar el tamaño en 100*/
+    }
+
+    100%{
+        background-position:0% 50%;
+       /* height: 50vh; y devolverlo a tamaño 50*/
+    }
+}

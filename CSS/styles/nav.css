@@ -35,7 +35,7 @@ nav {
 
     /*Degradado*/
   /*  background: linear-gradient(90deg, var(--color-principal), var(--color-base));*/
-    background: linear-gradient(90deg, var(--color-principal), rgb(69, 27, 168));
+    background-color: blueviolet;
 
 }
 
