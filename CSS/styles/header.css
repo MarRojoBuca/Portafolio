@@ -83,8 +83,34 @@ align-items: center;
 
 
 .css-selector {
-
+/*lo que estaba aqui se coloco en el header*/
 }
+
+
+/*
+    PSEUDO ELEMENTOS
+    Estos se utilizan para darle estilos a partes especificas de un elemento
+    lista de Pseudo Elementos
+    ::after
+    ::before
+    ::first-line
+    ::first-letter
+    ::selection
+    ::placeholder
+*/
+/*estilo para mi placeholder
+input::placeholder {
+    color: #35a886;
+}
+*/
+
+/* estilo para la ultima letra de mi parrafo 
+p::after{
+    content:var();
+    font-size: 24px;
+}
+*/
+
 
 /*Estos dos no son necesarios se colocan es por la compatibilidad del Navegador*/
 @-webkit-keyframes fondo {

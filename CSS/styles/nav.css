@@ -94,7 +94,54 @@ cursor: pointer;
 transition: background-color 0.5s, color 0.5s ;
 }
 
+.menu {
+    display: none; /*Para que desaparezca el men+u que ya habiamos creado*/
+}
 
+
+/*Query Responsive esto quiere decir que se adecua la pagina al equipo en donde se este viendo por ejemplo celular, tablet*/
+
+/*Extra small devices (Phones,600 px and down*/
+@media only screen and (max-width: 600px){
+    body {
+        background-color: brown;
+    }
+}
+
+/*Small devices (Portrait tables and large phones,600 px and up*/
+@media only screen and (min-width: 600px){
+    /*Si la pantalla es menor de 600 se ejecutará lo que se indique aqui*/
+    body {
+        background-color: darkblue;
+    }
+}
+
+/*Medium devices (Landscape tablest,768px and up*/
+@media only screen and (min-width: 768px){
+    body {
+        background-color: darkturquoise;
+    }
+    .menu {
+        display: flex; /*para que vuelva aparecer */
+    }
+    .menu-responsive {
+        display: none; /*para que desaparezca el menu responsive*/
+    }
+}
+
+/*Large devices (Laptops/desktops,992px and up*/
+@media only screen and (min-width: 992px){
+    body {
+        background-color: hotpink;
+    }
+}
+
+/*Extra Large devices (Large Laptops and desktops,1200px and down*/
+@media only screen and (min-width: 1200px){
+    body {
+        background-color:gold;
+    }
+}
 /* TAREA 1 CV, TAREA 2 la que se señala abajo
 Crear otros archivos llamados 
 ejercicios_ccs.html
