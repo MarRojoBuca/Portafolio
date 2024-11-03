@@ -28,13 +28,12 @@ header > div > img {
 }
 
 .izquierda{  /*para hacer la clase*/
- display: flex;    /*crea una fila*/
- flex-direction: column;  /*Para convertirla en columna*/
- justify-content: center;  /*Como el eje vertical de una columna es vertical con justify content lo centra verticalmente, pero es la columna no el texto*/
- /*alinear texto*/
- text-align:center;
- 
- gap: 16px; ;  /*separa los elemntos de una columna o fila*/
+display: flex;    /*crea una fila*/
+flex-direction: column;  /*Para convertirla en columna*/
+justify-content: center;  /*Como el eje vertical de una columna es vertical con justify content lo centra verticalmente, pero es la columna no el texto*/
+/*alinear texto*/
+text-align:center;
+gap: 16px; ;  /*separa los elemntos de una columna o fila*/
  /*background-color:cornflowerblue; */
 }
 
