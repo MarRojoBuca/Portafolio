@@ -1,0 +1,41 @@
+/*
+    justify y align son propiedades que solo se utilizan con  display:flex
+
+/*
+    crea  un mixing que me permita colocar un elemento
+    como grip o flex, y que ademas me permita manejar
+    su alinación del eje principal o el eje secundario
+
+@mixin display($display,$justify,$align,$columnas,$direction:row)
+    display: $display
+    @if display==grid
+    grid-template-columns: $columnas
+    @if display==flex
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+
+
+/* Utiliza el mixing para crear:
+    -Un grip con cuatro columna
+    -Una fila verticalmente centrada y horizontalmente a la derecha
+    -Una fila verticalmente en el fondo y horizontalmente a la izquierda
+    -Una columna verticalmente abajo y horizontalmente centrada
+
+.selector
+    @include display(grid,null, null,repeat(4,1f))
+
+.selector
+    @include display(flex,flex-end, center ,null)
+    /* flex-end lo coloca horizontalmente a la derecha el cual es el eje principal, center lo coloca verticalmente centrada
+
+.selector
+    @include display(flex,flex-start,end,null)
+    /* flex start lo coloca horizontalmente a la izquierda el cual es el eje pricipal y verticamente en el fondo con end
+
+.selector
+    @include display(flex,flex-end,center,null,columna)
+    /* flex-end lo coloca verticalmente abajo y center lo coloca horizontalmente centrado ya que en la variable direction colocamos que es una fila le colocamo columna para que sea una columna
+
+
+

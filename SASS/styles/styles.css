@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*  Mi Primera Variable */
+/*  Mixings
+ *  Son similares a las variables sin embargo pueden almacenar logica mas compleja
+ *  que una variable e incluso tener variaciones. Son similares a funciones en cualquier
+ *  otro programa de programación */
+/*  Si queremos que por default este centrado se le coloca en la variable enl valor center de una vez; de lo contrario se deja vacio
+ *  y dependiendo de lo que diga la variable se colocará la alineacion */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#inicial {
+  color: blue;
+}
+#inicial p {
+  background-color: red;
+}
+
+.columna-centrada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 20vh;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.blogs .blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */

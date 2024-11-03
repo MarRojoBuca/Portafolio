@@ -1,0 +1,28 @@
+/*
+    Mi Primera Variable
+
+$base-color: blue
+
+/*
+    Mixings
+    Son similares a las variables sin embargo pueden almacenar logica mas compleja
+    que una variable e incluso tener variaciones. Son similares a funciones en cualquier
+    otro programa de programación
+
+/*
+    Si queremos que por default este centrado se le coloca en la variable enl valor center de una vez; de lo contrario se deja vacio
+    y dependiendo de lo que diga la variable se colocará la alineacion
+
+@mixin columna($horizontal:center, $vertical:center)
+    display: flex
+    flex-direction: column
+    justify-content: $vertical
+    align-items: $horizontal
+
+@mixin grid($columnas)
+    display: grid
+    grid-template-columns: $columnas
+    
+*
+    margin: 0
+    padding: 0
