@@ -14,7 +14,11 @@
     justify-content: $justify
     align-items: $align
     flex-direction: $direction
-
+    @if $justify == center and  $align == center
+        background: blue
+    @else
+        /*
+            El Else Se activaria en caso de que el valor no sea flex
 
 /* Utiliza el mixing para crear:
     -Un grip con cuatro columna
@@ -38,4 +42,9 @@
     /* flex-end lo coloca verticalmente abajo y center lo coloca horizontalmente centrado ya que en la variable direction colocamos que es una fila le colocamo columna para que sea una columna
 
 
-
+/* Proyecto Final sass
+    Puedes elegir entre estos dos proyectos:
+        1- Realizar una copia de la página  de perfil de una cuenta de instagram (Ejercico Retador)
+        2- Realizar un blog. Este debe contener una barra de navegación del sitio web, un header
+        y varios blogs en un grid que deben de mostrar una imagen, un titulo,una breve descripción  y un boton  de leer mas. 
+        La página debe verse creible, es decir  sentirse como que es real y no una simple practica de un estudiante
