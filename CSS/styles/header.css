@@ -47,7 +47,7 @@ gap: 16px; ;  /*separa los elemntos de una columna o fila*/
     font-weight: 400;
 }
 
-.izquierda >div{
+.izquierda > div{
     /*Para que el registre y el combo box se vean como una fila se vean como un solo elemento aunque realmente ean dos*/
     display: flex;
     gap: 0;
